@@ -63,10 +63,7 @@
                     
                     
                     
-                    <a href="actualizar_cliente.php?id=<?php echo $cliente['id'] ?>&apellido=<?php echo $cliente->apellido_cliente ?>&nombre=<?php echo $cliente->nombre_cliente ?>&
-                				fecha_nacimiento=<?php echo $cliente->Fech_nac_cliente ?>& 
-                                pais=<?php echo $cliente->nombre_pais ?>&
-                                activo=<?php echo $cliente->activo_pais ?>
+                    <a href="actualizar_cliente.php?id=<?php echo $cliente['id'] ?>
                 
                 
                 " aria-label="Left Align">
@@ -75,14 +72,13 @@
                 </td>
                 
                  <td> 
-                 <a href="eliminarcliente.php?documento=<?php echo $cliente->documento_cliente ?>" aria-label="Left Align">
+                     <a href="eliminar_cliente.php?id=<?php  echo $cliente['id'] ?>" aria-label="Left Align">
                  
                   
                 		<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span> 
                 	</a>	
                 </td>
-	
-	
+
 	
             </tr>
         

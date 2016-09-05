@@ -24,6 +24,11 @@ class Crud{
         public $update;
         public $set;
         
+        //parametros para eliminar
+        
+        public $deleteFrom;
+        
+        
         
         public function Create(){
         
@@ -127,15 +132,41 @@ class Crud{
                 $consulta->execute();
                 $this->mensaje ="Se Actualizaron los Registros con Exito..";
             }
-
-            
-            
-            
-            
-            
+      
         }
         
         
+        public function Eliminar(){
+            
+            //primero lo establesco la conexion 
+            
+            $modelo = new Conexion();
+            $conexion = $modelo->conectar();
+            
+            $deleteFrom = $this->deleteFrom;
+            $condicion = $this->condicion;
+            
+            if ($condicion!='') {
+                
+                $condicion=" WHERE ".$condicion;
+            }
+            
+            //lo preparo la consulta
+            
+            $sql = "DELETE FROM $deleteFrom $condicion";
+            
+            $consulta = $conexion->prepare($sql);
+            
+            if (!$consulta) {
+                $this->mensaje=" Error al eliminar el Registro.. ";
+            }  else {
+                $consulta->execute();
+                $this->mensaje =" Se Efectuo la Eliminacion del Registro..";
+            }
+                
+            
+        }
+            
         
             }
 
