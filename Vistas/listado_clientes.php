@@ -1,13 +1,36 @@
-<?php require("../Controlador/listar_clientes.php"); ?>
+<?php 
+require("../Controlador/listar_clientes.php"); 
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Listado de clientes</title>
 
+
+    
+    
+    
+    
  <?php
     require './header.php';
+    
  ?>
 
+
+
+
+
+    
+
+    
+    
+    
+    
   </head>
 <body>
    <!--<h1>Hello, world!</h1>--> 
@@ -22,17 +45,24 @@
           	<p>
             </div>
 	        	
-          
+               <?php if ($filas != ''): ?> 
+
           <div> <strong> El total de Filas es .. <?php echo $total ?></strong> 
           </div>
     	<table class="table table-striped">
         	
+            
             	<tr class="danger">
+                  
         			<td> <b>DOCUMENTO</b></td><td><b> APELLIDO</b></td><td> <b>NOMBRE</b></td><td> <b>EDAD</b></td><td><b> PAIS</b></td><td><b><center>     ACTIVO</center></b></td> 	<td> </td> 	<td> </td> 	
-       			 </tr>
+       			
+                </tr>
     
+                         
         
+                         
        	 <?php 
+     
          
          foreach($filas as $cliente):?>
 			<tr>
@@ -60,33 +90,52 @@
                 <td>  
                     
                     
+
                     
-                    
-                    
-                    <a href="actualizar_cliente.php?id=<?php echo $cliente['id'] ?>
+            <div align="right"  >
                 
+              
+                <a href="actualizar_cliente.php?id=<?php echo $cliente['id'] ?>" class="btn btn-info" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span>  Editar  </a>
+                <a href="eliminar_cliente.php?id=<?php  echo $cliente['id'] ?>" onclick="return confirm('Deseas Eliminar este Registro?');" class="btn btn-danger"> <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>  Eliminar  </a> 
                 
-                " aria-label="Left Align">
-                		<span class="glyphicon glyphicon-pencil" aria-hidden="true"> </span> 
-                </a> 
-                </td>
-                
-                 <td> 
-                     <a href="eliminar_cliente.php?id=<?php  echo $cliente['id'] ?>" aria-label="Left Align">
-                 
+                   
+
+            </div>
+
+            
+
                   
-                		<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span> 
-                	</a>	
+                    
+             
+       
+                   
+                    
+               
                 </td>
+                
+                  <!--<td> 
+                     
+                     <div align="center">	<a href="eliminar_cliente.php?id=<?php  echo $cliente['id'] ?>" class="btn btn-danger" > <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>  Eliminar  </a> </div>
+                     
+                </td>-->
 
 	
             </tr>
         
          <?php endforeach;?>
+            <?php else: ?>
+            
+            <h3>No hay Datos para Mostrar</h3>
+            
+            
+           <?php endif; ?> 
+            
         </table>  
         
         </div>
   </div>
+   
+     
   
 <?php
 
@@ -94,6 +143,27 @@
 
 ?>
    
+  
+   
+
+ <script type="text/javascript">
+<!--
+function confirmation() {
+    var answer = confirm("Deseas eliminar este registro?")
+    if (answer){
+        // code for deleting record
+        
+    
+        }
+    else{
+        // do nothing
+    }
+}
+//-->
+</script>  
+
+
+
    
    
 </body>

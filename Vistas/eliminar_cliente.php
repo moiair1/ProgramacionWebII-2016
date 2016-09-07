@@ -8,6 +8,26 @@ require '../Controlador/eliminar_clientes.php';
 <head>
 <meta charset="UTF-8">
 <title>Eliminar el Registro</title>
+
+
+    <script>
+
+    window.onload=function(){
+
+                // Una vez cargada la página, el formulario se enviara automáticamente.
+
+		document.forms["defaultForm"].submit();
+
+             document.location.href ="listado_clientes.php";
+    
+
+    }
+
+    </script>
+
+
+
+
 </head>
 
 <body>
@@ -28,9 +48,9 @@ require '../Controlador/eliminar_clientes.php';
            
            <input type="hidden" name="eliminar" >
            <input type="hidden" name="id" value=" <?php echo htmlspecialchars($_GET["id"]) ?>">
-           <input type="submit" value="Eliminar">
+           <input onload="enviar()" type="submit" value="Eliminar" >
            
-    
+           
        </form>
     
     <?php endif ?>

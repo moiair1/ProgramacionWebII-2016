@@ -58,79 +58,29 @@ require '../Controlador/insertar_registro.php';
                                 </div>
                             </div>
 
-                       <!--     <div class="form-group">
-                                <label class="col-lg-3 control-label">Fecha Nacimiento: 
-                                
-                                </label>
-                                <div class="col-lg-5">
-                                    <input type="text" class="form-control" name="fecha_nac" value=""/>
-                                </div>
-                            </div>
--->
-
-
-
-
-
-						<div class="form-group">
+    						<div class="form-group">
 					<!--	<label class="col-lg-3 control-label">Fecha Nacimiento:    </label>-->
                         <div class="col-lg-8">
-       				       <!-- <div class="input-group date form_date col-lg-7" data-date="" 
-               						 data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    
-                                    
-                  					
-                                     
-                                   <input type="text" class="form-control" name="calendario"/>
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                    
-                                    <input  type="date" id="dtp_input2" name="fecha_nac"  value="" />
-                                     
-                					
-               				 </div>-->
-                             
-                            <!-- <div class="form-group">
-                             <input  type="date" class="form-control" name="fecha_nac"  value="" />
-                             </div>-->
+       			
                              
                         </div>
-<!--						<input  type="hidden" id="dtp_input2" name="fecha_nac"  value="" /><br/>             
--->          			  </div>
+         			  </div>
 
 
 
 						<div class="form-group">
 						<label class="col-lg-3 control-label">Fecha Nacimiento:    </label>
                         	<div class="col-lg-5">
-                                    <input type="date" class="form-control" name="fecha_nac" />
+                                    <input type="date" class="form-control" name="fecha_nac" id="datepicker"/>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-						
-
-
-
-
-
 
 
 
 							   <div class="form-group">
                                 <label class="col-lg-3 control-label">Pais de Nacimiento:</label>
                                 <div class="col-lg-5">
-                                    <select class="form-control" name="nacionalidad_id">
+                                    <select class="form-control" name="nacionalidad_id" >
                                         <option value="">-- Seleccione  Pais --</option>
                                     
                                         
@@ -150,13 +100,10 @@ require '../Controlador/insertar_registro.php';
                             </div>
 
 
-
-                      
-
 							<div class="form-group">
                                 <div class="col-lg-5 col-lg-offset-3">
                                     <div class="checkbox">
-                                        <input type="checkbox" name="activo"  checked /> Activo?
+                                        <input type="checkbox" name="activo"  checked value="1" /> Activo?
                                     </div>
                                 </div>
                             </div>

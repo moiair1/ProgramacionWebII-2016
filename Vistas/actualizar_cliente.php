@@ -76,7 +76,7 @@ require '../Controlador/actualizar_registro.php';
 						<div class="form-group">
 						<label class="col-lg-3 control-label">Fecha Nacimiento:    </label>
                         	<div class="col-lg-5">
-                                    <input type="date" class="form-control" name="fecha_nac"  value="<?php echo $fecha_nac;?>"/>
+                                    <input type="date" class="form-control" name="fecha_nac"  id="datepicker" value="<?php echo $fecha_nac;?>"/>
                                 </div>
                             </div>
 
