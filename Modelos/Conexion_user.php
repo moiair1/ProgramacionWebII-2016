@@ -1,12 +1,12 @@
 <?php
 
 
-class Conexion{
+class ConexionUser{
 
 	public function conectar(){
 		
 		$host 		=	'localhost';
-		$db		=	'DBII';
+		$db		=       'copia_DB_user';
 		$usuario 	= 	'root';
 		$password	=	'';
 		

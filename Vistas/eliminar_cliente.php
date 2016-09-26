@@ -1,5 +1,6 @@
 <?php 
 require '../Controlador/eliminar_clientes.php';
+require '../Requerimientos/session.php';
 
 ?>
 

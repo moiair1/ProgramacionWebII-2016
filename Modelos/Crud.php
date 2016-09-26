@@ -166,8 +166,54 @@ class Crud{
                 
             
         }
+        
+        public function  ConectarUser(){
+            
+           
+            //establezco la conexion
+            
+            $modeloConexion = new ConexionUser();
+            //uso el metedo conectar 
+            $conexion = $modeloConexion->conectar();
+            
+            //hasta aca estaria conectado
+            
+            //ahora lo realizo operaciones
+            $select = $this->seleccionar;
+            $from = $this->donde;
+            $condicion = $this->condicion;
+            
+            if ($condicion!='') {
+                
+                $condicion = " WHERE " . $condicion;
+            }
+            
+          //HAGO LA CONSULTA 
+            $sql = "SELECT $select FROM $from $condicion";
+            //PREPARO LA CONSULTA
+            
+            
+             $consulta = $conexion->prepare($sql);
+            
+             if (!$consulta) {
+                $this->mensaje=" Error en Acceder el Registro.. ";
+            }  else {
+                 $consulta->execute();
+                
+            }
+             //   $consulta->execute();
+        
+            
+            
+              while ($filas = $consulta->fetch()){
+                $this->rows[] = $filas; //que sera arreglo asociativo
+            }
+            
+            
+            
+        }
             
         
-            }
+}
 
 ?>

@@ -2,6 +2,9 @@
 
 require '../Controlador/insertar_registro.php';
 
+require '../Requerimientos/session.php';
+
+
 ?>
 
 
@@ -10,7 +13,7 @@ require '../Controlador/insertar_registro.php';
     <title>Listado de clientes</title>
 
  <?php
-    require './header.php';
+    require '../Requerimientos/header.php';
  ?>
 
   </head>
@@ -18,7 +21,7 @@ require '../Controlador/insertar_registro.php';
     
     <div class="container">
     
-      <div class="jumbotron"><h1>Registro de Clientes </h1></div>
+      <div class="page-header"><h3>Registro de Clientes </h3></div>
             
              <div class="container">
         <div class="row">
@@ -206,7 +209,7 @@ $(document).ready(function() {
             },
 			
           
-		  		fecha_nac: {
+            fecha_nac: {
                 message: 'El Calendario es invalido',
                 validators: {
                     notEmpty: {
@@ -243,7 +246,7 @@ $(document).ready(function() {
 
 <?php
 
-require './footer.php';
+require '../Requerimientos/footer.php';
 ?>
 
 

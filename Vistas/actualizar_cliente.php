@@ -1,7 +1,7 @@
 <?php
 
 require '../Controlador/actualizar_registro.php';
-
+require '../Requerimientos/session.php';
 ?>
 
 
@@ -10,7 +10,7 @@ require '../Controlador/actualizar_registro.php';
     <title>Listado de clientes</title>
 
  <?php
-    require './header.php';
+    require '../Requerimientos/header.php';
  ?>
 
   </head>
@@ -18,7 +18,7 @@ require '../Controlador/actualizar_registro.php';
     
     <div class="container">
     
-      <div class="jumbotron"><h1>Actualizacion de Clientes </h1></div>
+      <div class="page-header"><h2>Actualizacion de Clientes </h2></div>
             
              <div class="container">
         <div class="row">
@@ -303,7 +303,7 @@ $(document).ready(function() {
 
 <?php
 
-require './footer.php';
+require '../Requerimientos/footer.php';
 ?>
 
 

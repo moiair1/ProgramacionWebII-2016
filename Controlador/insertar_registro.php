@@ -22,12 +22,10 @@ if(isset($_POST['insertar'])){
     
     
     //aca lo puedo controloar los campos 
-    //if (!is_numeric($dni)) {
-      //  $mensaje = "EL documento debe ser numero";
-   // }  else {
-        
-    //}
-    
+     if (!is_numeric($doc)){
+        $mensaje = "Ingrese DNI de forma correcta";
+    }else{
+   
     
         $model = new Crud();
         $model->insertInto = 'clientes';
@@ -37,7 +35,7 @@ if(isset($_POST['insertar'])){
         $model->Create();
         $mensaje = $model->mensaje;
                 
-    
+    }
 
 }
 

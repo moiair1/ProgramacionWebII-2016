@@ -1,44 +1,30 @@
 <?php 
 require("../Controlador/listar_clientes.php"); 
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Listado de clientes</title>
-
-
-    
-    
-    
     
  <?php
-    require './header.php';
-    
+            require '../Requerimientos/header.php';
+            require '../Requerimientos/session.php';
+
  ?>
 
-
-
-
-
-    
-
-    
-    
-    
     
   </head>
 <body>
-   <!--<h1>Hello, world!</h1>--> 
+  
+  
+    
+    <!--<h1>Hello, world!</h1>--> 
 
     
     <div class="container">
     
-      <div class="jumbotron"><h1>Listado de Clientes </h1></div>
+      <div class="page-header"><h2>Listado de Clientes </h2></div>
       
       <div>
           <div align="center">	<a href="insertar_cliente.php" class="btn btn-primary" > Nuevo Cliente</a>
@@ -58,9 +44,7 @@ require("../Controlador/listar_clientes.php");
        			
                 </tr>
     
-                         
-        
-                         
+                     
        	 <?php 
      
          
@@ -89,9 +73,7 @@ require("../Controlador/listar_clientes.php");
                 
                 <td>  
                     
-                    
-
-                    
+            
             <div align="right"  >
                 
               
@@ -102,22 +84,9 @@ require("../Controlador/listar_clientes.php");
 
             </div>
 
-            
 
-                  
-                    
-             
-       
-                   
-                    
-               
                 </td>
-                
-                  <!--<td> 
-                     
-                     <div align="center">	<a href="eliminar_cliente.php?id=<?php  echo $cliente['id'] ?>" class="btn btn-danger" > <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>  Eliminar  </a> </div>
-                     
-                </td>-->
+
 
 	
             </tr>
@@ -139,7 +108,7 @@ require("../Controlador/listar_clientes.php");
   
 <?php
 
-                          require './footer.php';
+                          require '../Requerimientos/footer.php';
 
 ?>
    
@@ -163,8 +132,6 @@ function confirmation() {
 </script>  
 
 
-
-   
    
 </body>
 </html>
